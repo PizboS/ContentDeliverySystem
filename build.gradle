@@ -1,0 +1,59 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.4.4'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'war'
+}
+
+version 'unspecified'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+    compileOnly 'javax.servlet:javax.servlet-api:4.0.1'
+    compileOnly 'javax.servlet:jsp-api:2.0'
+
+    implementation 'org.postgresql:postgresql:42.4.0'
+
+    implementation 'io.springfox:springfox-swagger2:2.9.2'
+
+    implementation group: 'jstl', name: 'jstl', version: '1.2'
+
+    implementation 'org.springframework.boot:spring-boot-configuration-processor:2.7.0'
+
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.7.0'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.7.0'
+
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper:9.0.46'
+
+    implementation 'com.vladmihalcea:hibernate-types-52:2.12.1'
+
+    implementation 'joda-time:joda-time:2.10.14'
+
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.3'
+
+    implementation 'org.apache.httpcomponents:httpclient:4.5.13'
+
+
+
+
+
+
+
+
+
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
